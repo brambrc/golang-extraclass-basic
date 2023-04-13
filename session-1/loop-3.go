@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	var a int
+	fmt.Print("Masukan Angka : ")
+	fmt.Scanln(&a)
+
+	for x := 1; x <= a; x++ {
+		for y := a; y >= x; y-- {
+			fmt.Print("* ")
+		}
+
+		fmt.Println()
+	}
+
+}
