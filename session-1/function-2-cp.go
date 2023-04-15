@@ -12,15 +12,26 @@ func add(a int, b int) string {
 
 func min(a int, b int) string {
 	//buat kondisi dimana angka yg lebih besar menjadi pebilang
-	result := a - b
-	return fmt.Sprintf("Hasil Pengurangan angka %d dan %d adalah %d: ", a, b, result)
+	result := 0
+	if a > b {
+		result = a - b
+		return fmt.Sprintf("Hasil Pengurangan angka %d dan %d adalah %d: ", a, b, result)
+	} else {
+		result = b - a
+		return fmt.Sprintf("Hasil Pengurangan angka %d dan %d adalah %d: ", b, a, result)
+	}
 }
 
 func div(a int, b int) string {
 	//buat kondisi dimana angka yg lebih besar menjadi pebilang
-	result := a / b
-
-	return fmt.Sprintf("Hasil Pembagian angka %d dan %d adalah %d: ", a, b, result)
+	result := 0
+	if a > b {
+		result = a / b
+		return fmt.Sprintf("Hasil Pembagian angka %d dan %d adalah %d: ", a, b, result)
+	} else {
+		result = b / a
+		return fmt.Sprintf("Hasil Pembagian angka %d dan %d adalah %d: ", b, a, result)
+	}
 }
 
 func mul(a int, b int) string {

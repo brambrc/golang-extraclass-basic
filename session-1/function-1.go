@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func luasSegitiga(alas int, tinggi int) int {
@@ -9,7 +10,9 @@ func luasSegitiga(alas int, tinggi int) int {
 }
 
 func kelilingSegitiga(alas int, tinggi int) int {
-	return alas + tinggi + alas
+	setengahAlas := alas / 2
+	sisiMiring := int(math.Sqrt(float64(setengahAlas*setengahAlas + tinggi*tinggi)))
+	return alas + sisiMiring + sisiMiring
 }
 
 func main() {
