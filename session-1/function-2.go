@@ -7,24 +7,27 @@ import (
 func add(a int, b int) string {
 	result := a + b
 
-	return fmt.Sprintf("Hasil Penjumlahan angka %d dan %d adalah %d: ", a, b, result)
+	return fmt.Sprintf("Hasil Penjumlahan angka %d dan %d adalah %d", a, b, result)
 }
 
 func min(a int, b int) string {
 	result := a - b
-	return fmt.Sprintf("Hasil Pengurangan angka %d dan %d adalah %d: ", a, b, result)
+	return fmt.Sprintf("Hasil Pengurangan angka %d dan %d adalah %d", a, b, result)
 }
 
 func div(a int, b int) string {
+	if b == 0 {
+		return fmt.Sprintln("Tidak bisa melakukan pembagian dengan nol")
+	}
 	result := a / b
 
-	return fmt.Sprintf("Hasil Pembagian angka %d dan %d adalah %d: ", a, b, result)
+	return fmt.Sprintf("Hasil Pembagian angka %d dan %d adalah %d", a, b, result)
 }
 
 func mul(a int, b int) string {
 	result := a * b
 
-	return fmt.Sprintf("Hasil Perkalian angka %d dan %d adalah %d: ", a, b, result)
+	return fmt.Sprintf("Hasil Perkalian angka %d dan %d adalah %d", a, b, result)
 }
 
 func main() {
@@ -35,7 +38,7 @@ func main() {
 	fmt.Scanln(&a)
 	fmt.Print("Masukan Angka Kedua: ")
 	fmt.Scanln(&b)
-	fmt.Print("Masukan Operator: ")
+	fmt.Print("Masukan Operator (+, -, *, /): ")
 	fmt.Scanln(&opt)
 
 	switch opt {
