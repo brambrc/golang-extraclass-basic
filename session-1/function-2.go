@@ -5,7 +5,7 @@ import (
 )
 
 func add(a int, b int) string {
-	result := a + b
+	var result = a+b
 
 	return fmt.Sprintf("Hasil Penjumlahan angka %d dan %d adalah %d: ", a, b, result)
 }
